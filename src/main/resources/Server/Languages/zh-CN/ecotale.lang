@@ -1,0 +1,271 @@
+# Ecotale Economy Plugin - 简体中文 (Chinese Simplified)
+# Format: key=value
+
+# ========== Commands - Balance ==========
+balance.header=您的余额
+balance.current=当前余额: {0}
+balance.earned=总收入: {0}
+balance.spent=总支出: {0}
+
+# ========== Commands - Pay ==========
+pay.success=已发送 {0} 给 {1}
+pay.received=收到 {0} 来自 {1}
+pay.fee=转账手续费: {0}
+pay.insufficient=余额不足
+pay.invalid_amount=无效金额
+pay.player_not_found=未找到玩家
+pay.self=不能给自己转账
+pay.minimum=最小金额为 {0}
+
+# ========== Commands - Admin ==========
+admin.give=给予 {0} 给 {1}
+admin.take=从 {1} 扣除 {0}
+admin.set=设置 {1} 的余额为 {0}
+admin.reset=重置 {0} 的余额
+admin.save=经济数据已保存!
+admin.reload=配置已重载!
+admin.no_data=未找到余额数据
+
+# ========== Commands - Top ==========
+top.header=财富排行榜
+top.entry=#{0} {1} - {2}
+top.empty=暂无数据
+
+# ========== GUI - Admin Panel ==========
+gui.admin.title=管理面板
+gui.admin.tab.dashboard=概览
+gui.admin.tab.players=玩家
+gui.admin.tab.top=排行榜
+gui.admin.tab.log=日志
+gui.admin.tab.config=配置
+gui.admin.force_save=保存
+gui.admin.close=关闭
+
+# ========== GUI - Dashboard ==========
+gui.dashboard.economy_stats=经济统计
+gui.dashboard.total_circulating=总流通量
+gui.dashboard.total_players=持币玩家
+gui.dashboard.total_money=总金额
+gui.dashboard.avg_balance=平均余额
+gui.dashboard.current_config=当前配置
+gui.dashboard.recent_activity=近期活动
+gui.dashboard.no_activity=近期无活动
+
+# ========== GUI - Players Tab ==========
+gui.players.search=搜索...
+gui.players.search_label=搜索
+gui.players.select_player=选择玩家
+gui.players.amount=金额:
+gui.players.give=给予
+gui.players.take=扣除
+gui.players.set=设置
+gui.players.reset=重置
+gui.players.reset_confirm=确认?
+gui.players.balance=余额: {0}
+gui.players.online=在线
+gui.players.offline=离线
+gui.players.no_players=无玩家
+
+# ========== GUI - Top Tab ==========
+gui.top.title=财富前十
+gui.top.rank=#{0}
+gui.top.no_data=无数据
+
+# ========== GUI - Log Tab ==========
+gui.log.filter=按名称筛选...
+gui.log.no_entries=无交易记录
+gui.log.requires_h2=日志需要H2数据库
+gui.log.page=页 {0} / {1}
+
+# ========== GUI - Config Tab ==========
+gui.config.title=配置
+gui.config.reload=重载
+gui.config.save=保存
+gui.config.saved=已保存!
+gui.config.reset_defaults=重置
+gui.config.currency=货币
+gui.config.symbol=符号:
+gui.config.name=名称:
+gui.config.limits=限制
+gui.config.starting=初始:
+gui.config.max=最大:
+gui.config.transactions=交易
+gui.config.fee=费率:
+gui.config.min=最小:
+gui.config.display=显示
+gui.config.hud=HUD:
+gui.config.decimals=小数:
+gui.config.language=语言
+gui.config.lang=语言:
+gui.config.per_player=玩家独立语言:
+gui.config.yes=是
+gui.config.no=否
+
+# ========== GUI - Pay Panel ==========
+gui.pay.title=发送付款
+gui.pay.your_balance_label=您的余额
+gui.pay.search=搜索
+gui.pay.amount=金额
+gui.pay.fee_label=手续费
+gui.pay.no_players=无在线玩家
+gui.pay.recipient=收款人:
+gui.pay.your_balance=余额: {0}
+gui.pay.send=付款
+gui.pay.cancel=取消
+
+# ========== HUD ==========
+hud.balance=余额: {0}
+hud.prefix=银行
+
+# ========== Validation ==========
+error.invalid_amount=无效金额
+error.max_exceeded=超过限额 ({0})
+error.select_player=请选择玩家
+error.no_permission=无权限
+
+# ========== Action Feedback ==========
+action.data_saved=数据已保存!
+action.config_reloaded=配置已重载!
+action.config_saved=配置已保存!
+action.config_reset=配置已重置!
+action.hud_enabled=HUD: 已启用
+action.hud_disabled=HUD: 已禁用
+action.language_changed=语言: {0}
+action.per_player_enabled=玩家独立语言: 已启用
+action.per_player_disabled=玩家独立语言: 已禁用
+action.gave=给予 {0} 给 {1}
+action.took=从 {1} 扣除 {0}
+action.set=设置 {0} 为 {1}
+action.reset=重置 {0} 为 {1}
+action.failed_insufficient=失败 - 余额不足
+
+# ========== Pay Feedback ==========
+pay.select_player=请先选择玩家
+pay.enter_amount=请输入有效金额
+pay.payment_sent=付款已发送!
+pay.fee_notice=(手续费: {0})
+pay.balance_after=付后余额
+
+# ========== Physical Currency - Coins ==========
+items.coin_copper.name=铜币
+items.coin_copper.description=价值 1 铜。最基础的货币。
+items.coin_iron.name=铁币
+items.coin_iron.description=价值 10 铜。
+items.coin_cobalt.name=钴币
+items.coin_cobalt.description=价值 100 铜。
+items.coin_gold.name=金币
+items.coin_gold.description=价值 1,000 铜。贵重货币。
+items.coin_mithril.name=秘银币
+items.coin_mithril.description=价值 100,000 铜。最稀有的货币。
+items.coin_adamantite.name=精金币
+items.coin_adamantite.description=价值 10,000 铜。传说中的货币。
+
+# Coin names (for bank GUI display)
+coins.copper=铜
+coins.iron=铁
+coins.cobalt=钴
+coins.gold=金
+coins.mithril=秘银
+coins.adamantite=精金
+
+# ========== Bank ==========
+bank.title=银行账户
+bank.balance=银行存款: {0}
+bank.physical=随身携带: {0}
+bank.total=总资产: {0}
+bank.deposit.success=已存入 {0}
+bank.withdraw.success=已取出 {0}
+bank.limit=银行限额: {0}
+bank.full=银行已满!
+bank.insufficient=硬币不足
+
+# ========== GUI - Bank Panel ==========
+gui.bank.title=银行
+gui.bank.close=关闭
+
+# Bank Header - Wealth Display
+gui.bank.wallet=口袋
+gui.bank.bank=银行
+gui.bank.total=总计
+
+# Bank Tabs
+gui.bank.tab.wallet=口袋
+gui.bank.tab.deposit=存款
+gui.bank.tab.withdraw=取款
+gui.bank.tab.exchange=兑换
+
+# Wallet Tab
+gui.bank.wallet.title=您的硬币收藏
+gui.bank.wallet.quick_actions=快捷操作
+gui.bank.wallet.deposit_all=全部存入
+gui.bank.wallet.withdraw_all=全部取出
+gui.bank.wallet.consolidate=整理硬币
+
+# Deposit Tab
+gui.bank.deposit.from=从口袋
+gui.bank.deposit.to=存入银行
+gui.bank.deposit.amount=存款金额
+gui.bank.deposit.confirm=确认存款
+gui.bank.deposit.coins_preview=存款预览
+gui.bank.deposit.success=已存入 {0}!
+gui.bank.deposit.failed=存款失败
+
+# Withdraw Tab
+gui.bank.withdraw.from=从银行
+gui.bank.withdraw.to=提取到口袋
+gui.bank.withdraw.amount=取款金额
+gui.bank.withdraw.confirm=确认取款
+gui.bank.withdraw.coins_preview=取款预览
+gui.bank.withdraw.success=已取出 {0}!
+gui.bank.withdraw.failed=取款失败
+gui.bank.withdraw.no_space=背包空间不足
+
+# Exchange Tab
+gui.bank.exchange.title=硬币兑换
+gui.bank.exchange.from=兑换源
+gui.bank.exchange.to=兑换目标
+gui.bank.exchange.amount=数量:
+gui.bank.exchange.confirm=兑换
+gui.bank.exchange.preview=预览
+gui.bank.exchange.result=结果:
+gui.bank.exchange.success=兑换成功!
+gui.bank.exchange.failed=兑换失败
+gui.bank.exchange.you_have=拥有: {0}
+gui.bank.exchange.enter_amount=输入数量
+gui.bank.exchange.not_enough={0} 不足 (现有 {1})
+gui.bank.exchange.need_at_least=至少需要 {0} {1}
+gui.bank.exchange.need_slots=需要 {0} 格空间, 仅有 {1}
+gui.bank.exchange.same_coin=请选择不同币种
+gui.bank.exchange.rate=汇率: {0} {1} = {2} {3}
+gui.bank.exchange.use_get=支付: {0} {1}  -->  获得: {2} {3}
+gui.bank.exchange.max_possible=最大可能
+
+# Deposit/Withdraw Previews
+gui.bank.deposit.preview=存后: 银行 {0} (+{1})
+gui.bank.withdraw.preview=取后: 口袋 {0} (+{1})
+
+# Transactions
+transaction.error.duplicate=检测到重复交易
+transaction.error.invalid_amount=无效金额
+transaction.error.too_large=金额过大
+transaction.error.insufficient_funds={0} 不足 (现有 {1}, 需要 {2})
+transaction.error.no_space=空间不足 (需要 {0}, 现有 {1})
+transaction.error.take_failed=扣除硬币失败
+transaction.error.space_changed=背包状态变更 - 资金已存入银行
+transaction.error.safe_deposit=无空间 - 您的 {0} 已存入银行
+transaction.error.delivery_failed=发货失败 - 您的 {0} 已存入银行
+transaction.error.bank_insufficient=银行余额不足 (现有 {0}, 需要 {1})
+transaction.error.bank_withdraw_failed=银行取款失败
+transaction.success.exchange=已将 {0} {1} 兑换为 {2} {3}
+transaction.success.withdraw=从银行取出 {0}
+transaction.success.deposit=存入 {0} 到银行
+
+# Common
+gui.bank.error.invalid_amount=请输入有效金额
+gui.bank.error.insufficient_funds=余额不足
+gui.bank.error.bank_limit=超过银行限额
+gui.bank.wait=请稍候再操作
+gui.bank.error.no_pocket_coins=口袋中没有硬币可存
+gui.bank.error.no_bank_coins=银行中没有硬币可取
+gui.bank.error.no_consolidate=无可整理硬币
+gui.bank.consolidate_success=硬币已整理为最大面额

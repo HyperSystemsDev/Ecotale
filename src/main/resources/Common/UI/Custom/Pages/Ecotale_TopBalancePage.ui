@@ -1,0 +1,181 @@
+$E = "Ecotale_Common.ui";
+
+Group #TopBalanceRoot {
+  Anchor: (Left: 0, Top: 0, Right: 0, Bottom: 0);
+  LayoutMode: Center;
+
+  Group #TopBalanceCard {
+    Anchor: (Width: 620, Height: 520);
+    Background: (Color: #1a1a2eee);
+    LayoutMode: Top;
+    OutlineColor: #3a4a6a;
+    OutlineSize: 1;
+
+    // Header
+    Group #Header {
+      LayoutMode: Left;
+      Background: (Color: #0f1520);
+      Padding: (Top: 12, Bottom: 12, Left: 20, Right: 16);
+      Anchor: (Height: 48);
+
+      Label #Title {
+        Text: "TOP BALANCE";
+        Style: (FontSize: 18, TextColor: #FFD700, RenderBold: true);
+        FlexWeight: 1;
+        Anchor: (Vertical: 0);
+      }
+
+      Label #TotalBalanceDisplay {
+        Text: "$0";
+        Style: (FontSize: 14, TextColor: #E8D48B, RenderBold: true);
+        Anchor: (Vertical: 0, Right: 12);
+      }
+
+      TextButton #CloseButton {
+        Text: "X";
+        Style: $E.@EcoButtonRedStyle;
+        Anchor: (Width: 30, Height: 30);
+      }
+    }
+
+    // Tabs (functional)
+    Group #TabBar {
+      LayoutMode: Center;
+      Background: (Color: #0f1525);
+      Anchor: (Height: 40);
+      OutlineColor: #2a3a5a;
+      OutlineSize: 1;
+
+      Group #TabButtonsRow {
+        LayoutMode: CenterMiddle;
+        Anchor: (Width: 360, Height: 34, Vertical: 0);
+
+        TextButton #TabAllTime {
+          Text: "All Time";
+          Style: $E.@EcoButtonAccentStyle;
+          Anchor: (Width: 120, Height: 30, Right: 8);
+        }
+
+        TextButton #TabWeekly {
+          Text: "Weekly";
+          Style: $E.@EcoButtonStyle;
+          Anchor: (Width: 110, Height: 30, Right: 8);
+        }
+
+        TextButton #TabMonthly {
+          Text: "Monthly";
+          Style: $E.@EcoButtonStyle;
+          Anchor: (Width: 110, Height: 30);
+        }
+      }
+    }
+
+    Group #Content {
+      LayoutMode: Top;
+      Padding: (Full: 12);
+      FlexWeight: 1;
+
+      // Your stats summary
+      Group #YourStats {
+        LayoutMode: Left;
+        Background: (Color: #0f1525);
+        Padding: (Left: 12, Right: 12, Top: 8, Bottom: 8);
+        Anchor: (Height: 42, Bottom: 10);
+        OutlineColor: #3a4a6a;
+        OutlineSize: 1;
+
+        Label #YourRankLabel {
+          Text: "Your Rank";
+          Style: (FontSize: 11, TextColor: #888888, VerticalAlignment: Center);
+          Anchor: (Width: 90, Vertical: 0);
+        }
+
+        Label #YourRankValue {
+          Text: "#-";
+          Style: (FontSize: 13, TextColor: #ffffff, RenderBold: true, VerticalAlignment: Center);
+          Anchor: (Width: 60, Vertical: 0, Right: 12);
+        }
+
+        Label #YourBalanceLabel {
+          Text: "Your Balance";
+          Style: (FontSize: 11, TextColor: #888888, VerticalAlignment: Center);
+          Anchor: (Width: 100, Vertical: 0);
+        }
+
+        Label #YourBalanceValue {
+          Text: "$0";
+          Style: (FontSize: 13, TextColor: #32CD32, RenderBold: true, VerticalAlignment: Center);
+          FlexWeight: 1;
+          Anchor: (Vertical: 0);
+        }
+      }
+
+      // Column header
+      Group #HeaderRow {
+        LayoutMode: Left;
+        Background: (Color: #0a0f15);
+        Padding: (Left: 10, Right: 10);
+        Anchor: (Height: 22, Bottom: 4);
+
+        Label { Text: "RANK"; Style: (FontSize: 10, TextColor: #666666, VerticalAlignment: Center); Anchor: (Width: 42); }
+        Label { Text: "STATUS"; Style: (FontSize: 10, TextColor: #666666, VerticalAlignment: Center); Anchor: (Width: 70); }
+        Label { Text: "PLAYER"; Style: (FontSize: 10, TextColor: #666666, VerticalAlignment: Center); FlexWeight: 1; }
+        Label { Text: "BALANCE"; Style: (FontSize: 10, TextColor: #666666, VerticalAlignment: Center, HorizontalAlignment: End); Anchor: (Width: 120); }
+        Label { Text: "TREND"; Style: (FontSize: 10, TextColor: #666666, VerticalAlignment: Center, HorizontalAlignment: End); Anchor: (Width: 90); }
+      }
+
+      // Scrollable list
+      Group #TopListContainer {
+        LayoutMode: TopScrolling;
+        Background: (Color: #0f1525);
+        FlexWeight: 1;
+        Padding: (Top: 6, Bottom: 6, Left: 8, Right: 8);
+        OutlineColor: #3a4a6a;
+        OutlineSize: 1;
+        ScrollbarStyle: (
+          Size: 6,
+          Spacing: 2,
+          Background: #0f1525,
+          Handle: #b8860b,
+          HoveredHandle: #daa520,
+          DraggedHandle: #8b6914
+        );
+
+        Group #TopList {
+          LayoutMode: Top;
+        }
+      }
+
+      // Pagination
+      Group #Pagination {
+        LayoutMode: Left;
+        Anchor: (Height: 32, Top: 8);
+
+        TextButton #PrevButton {
+          Text: "<";
+          Style: $E.@EcoButtonStyle;
+          Anchor: (Width: 40, Height: 28, Right: 8);
+        }
+
+        Label #PageLabel {
+          Text: "Page 1";
+          Style: (FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center);
+          FlexWeight: 1;
+          Anchor: (Vertical: 0);
+        }
+
+        TextButton #NextButton {
+          Text: ">";
+          Style: $E.@EcoButtonStyle;
+          Anchor: (Width: 40, Height: 28, Left: 8);
+        }
+
+        Label #CountLabel {
+          Text: "0 players";
+          Style: (FontSize: 11, TextColor: #666666, VerticalAlignment: Center, HorizontalAlignment: End);
+          Anchor: (Width: 120, Vertical: 0);
+        }
+      }
+    }
+  }
+}

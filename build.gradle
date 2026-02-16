@@ -1,0 +1,164 @@
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '8.3.8'
+}
+
+version = project.mod_version
+group = project.mod_group
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version)
+    withSourcesJar()
+}
+
+// Show detailed deprecation warnings
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:deprecation'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repo.codemc.io/repository/creatorfromhell/"
+    }
+}
+
+dependencies {
+    // Hytale Server API
+    compileOnly files('libs/hytale-server.jar')
+    
+    // Annotations
+    compileOnly 'org.checkerframework:checker-qual:3.42.0'
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+    compileOnly "org.slf4j:slf4j-api:1.7.30"
+    
+    // H2 Database for persistent storage
+    implementation 'com.h2database:h2:2.2.224'
+    
+    // MySQL Connector for shared database support
+    implementation 'com.mysql:mysql-connector-j:9.1.0'
+    
+    // HikariCP for MySQL connection pooling (fixes timeout issues)
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    
+    // MongoDB driver for document database support
+    implementation 'org.mongodb:mongodb-driver-sync:4.11.1'
+    
+    // SimpleHUD-Lib is now inlined in com.ecotale.lib.simplehud
+    // No external dependency needed
+
+    //VaultUnlocked
+    compileOnly 'net.cfh.vault:VaultUnlocked:2.18.3'
+    compileOnly 'org.jetbrains:annotations:26.0.2'
+
+    //Cassaforte
+    compileOnly files('libs/Cassaforte-0.1.3.jar')
+
+    //PlaceholderAPI integrations
+    compileOnly files('libs/PlaceholderAPI-1.0.5.jar')
+    compileOnly files('libs/WiFlowPlaceholderAPI-1.0.3.jar')
+}
+
+processResources {
+    var expandProps = [
+        'name'          : project.mod_name,
+        'version'       : project.mod_version,
+        'group'         : project.mod_group,
+        'description'   : project.mod_description,
+        'website'       : project.website,
+        'server_version': project.server_version,
+        'entry_point'   : project.entry_point
+    ]
+
+    filesMatching(['manifest.json']) {
+        expand expandProps
+    }
+    inputs.properties(expandProps)
+
+    from('src/main/resources/Common/UI/Custom/Pages') {
+        into 'UI/Custom/Pages'
+    }
+}
+
+tasks.register('generateAssetsJson') {
+    doLast {
+        def resourceDir = file('src/main/resources')
+        def outputFile = file('src/main/resources/assets.json')
+        def entries = []
+
+        def assetsDir = new File(resourceDir, 'assets')
+        if (assetsDir.exists()) {
+            assetsDir.eachFileRecurse { f ->
+                if (f.isFile()) {
+                    def rel = assetsDir.toPath().relativize(f.toPath()).toString().replace('\\', '/')
+                    entries.add("assets/" + rel)
+                }
+            }
+        }
+
+        def uiDir = new File(resourceDir, 'Common/UI/Custom/Pages')
+        if (uiDir.exists()) {
+            uiDir.eachFileRecurse { f ->
+                if (f.isFile() && f.name.endsWith('.ui')) {
+                    def rel = uiDir.toPath().relativize(f.toPath()).toString().replace('\\', '/')
+                    entries.add("Common/UI/Custom/Pages/" + rel)
+                }
+            }
+        }
+
+        def unique = entries.unique().sort()
+        outputFile.text = "[\n" + unique.collect { "  \"${it}\"" }.join(",\n") + "\n]\n"
+    }
+}
+
+processResources.dependsOn(tasks.named('generateAssetsJson'))
+
+jar {
+    archiveBaseName = project.mod_name
+    archiveVersion = project.mod_version
+    
+    manifest {
+        attributes(
+            'Implementation-Title': project.mod_name,
+            'Implementation-Version': project.mod_version
+        )
+    }
+}
+
+// Shadow JAR bundles H2 database AND SimpleHUD-Lib
+shadowJar {
+    archiveBaseName = project.mod_name
+    archiveVersion = project.mod_version
+    archiveClassifier = ''
+    
+    // Note: Not relocating SimpleHUD-Lib due to Java 25 ASM compatibility
+    // This is fine since SimpleHUD-Lib is bundled, not a shared library
+    
+    // Relocate HikariCP to avoid conflicts with other mods (LuckPerms uses same pattern)
+    relocate 'com.zaxxer.hikari', 'com.ecotale.lib.hikari'
+    
+    // START OPTIMIZATIONS
+    // Exclude H2 Web Console and Tools (saves space, not used by plugin)
+    exclude 'org/h2/server/web/**'
+    exclude 'org/h2/tools/**'
+    exclude 'org/h2/jmx/**'
+    
+    // Exclude unneeded Metadata
+    exclude 'META-INF/versions/**'
+    exclude 'META-INF/*.DSA'
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/*.SF'
+    exclude 'module-info.class'
+    exclude '**/package-info.class'
+    exclude 'NOTICE'
+    
+    // Exclude SLF4J to prevent class loader conflicts (LuckPerms approach)
+    // HikariCP depends on SLF4J but spark/EcotaleMarket already provide it
+    exclude 'org/slf4j/**'
+    exclude 'META-INF/services/org.slf4j.*'
+    // END OPTIMIZATIONS
+
+    mergeServiceFiles()
+}
+
+

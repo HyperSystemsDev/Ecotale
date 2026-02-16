@@ -1,0 +1,276 @@
+# Ecotale Economy Plugin - English Translations
+# Format: key=value
+# Note: Keys are auto-prefixed with "ecotale." by Hytale's I18nModule
+
+# ========== Commands - Balance ==========
+balance.header=Your Balance
+balance.current=Current Balance: {0}
+balance.earned=Total Earned: {0}
+balance.spent=Total Spent: {0}
+
+# ========== Commands - Pay ==========
+pay.success=Sent {0} to {1}
+pay.received=Received {0} from {1}
+pay.fee=Transfer fee: {0}
+pay.insufficient=Insufficient funds
+pay.invalid_amount=Invalid amount
+pay.player_not_found=Player not found
+pay.self=You cannot pay yourself
+pay.minimum=Minimum transaction is {0}
+
+# ========== Commands - Admin ==========
+admin.give=Gave {0} to {1}
+admin.take=Took {0} from {1}
+admin.set=Set {1}'s balance to {0}
+admin.reset=Reset {0}'s balance
+admin.save=Economy data saved!
+admin.reload=Configuration reloaded!
+admin.no_data=No player balances found
+
+# ========== Commands - Top ==========
+top.header=Top Balances
+top.entry=#{0} {1} - {2}
+top.empty=No balances to display
+
+# ========== GUI - Admin Panel ==========
+gui.admin.title=Economy Admin Panel
+gui.admin.tab.dashboard=DASHBOARD
+gui.admin.tab.players=PLAYERS
+gui.admin.tab.top=TOP
+gui.admin.tab.log=LOG
+gui.admin.tab.config=CONFIG
+gui.admin.force_save=FORCE SAVE
+gui.admin.close=X
+
+# ========== GUI - Dashboard ==========
+gui.dashboard.economy_stats=Economy Stats
+gui.dashboard.total_circulating=Total Circulating
+gui.dashboard.total_players=Players with Balance
+gui.dashboard.total_money=Total Money
+gui.dashboard.avg_balance=Average Balance
+gui.dashboard.current_config=Current Configuration
+gui.dashboard.recent_activity=Recent Activity
+gui.dashboard.no_activity=No recent activity
+
+# ========== GUI - Players Tab ==========
+gui.players.search=Search players...
+gui.players.search_label=Search
+gui.players.select_player=Select a player
+gui.players.amount=Amount:
+gui.players.give=GIVE
+gui.players.take=TAKE
+gui.players.set=SET
+gui.players.reset=RESET
+gui.players.reset_confirm=CONFIRM?
+gui.players.balance=Balance: {0}
+gui.players.online=Online
+gui.players.offline=Offline
+gui.players.no_players=No players found
+
+# ========== GUI - Top Tab ==========
+gui.top.title=Top 10 Balances
+gui.top.rank=#{0}
+gui.top.no_data=No data available
+
+# ========== GUI - Log Tab ==========
+gui.log.filter=Filter by name...
+gui.log.no_entries=No transactions
+gui.log.requires_h2=Transaction log requires H2 storage
+gui.log.page=Page {0} of {1}
+
+# ========== GUI - Config Tab ==========
+gui.config.title=Configuration
+gui.config.reload=RELOAD CONFIG
+gui.config.save=SAVE CONFIG
+gui.config.saved=Configuration saved!
+gui.config.reset_defaults=RESET DEFAULTS
+gui.config.currency=Currency
+gui.config.symbol=Symbol:
+gui.config.name=Name:
+gui.config.limits=Balance Limits
+gui.config.starting=Starting:
+gui.config.max=Maximum:
+gui.config.transactions=Transactions
+gui.config.fee=Transfer Fee:
+gui.config.min=Minimum:
+gui.config.display=Display
+gui.config.hud=Enable HUD:
+gui.config.decimals=Decimals:
+gui.config.language=Language
+gui.config.lang=Language:
+gui.config.per_player=Use Player Language:
+gui.config.yes=Yes
+gui.config.no=No
+
+# ========== GUI - Pay Panel ==========
+gui.pay.title=Send Payment
+gui.pay.your_balance_label=Your Balance
+gui.pay.search=Search
+gui.pay.amount=Amount
+gui.pay.fee_label=Transfer Fee
+gui.pay.no_players=No players online
+gui.pay.recipient=Recipient:
+gui.pay.your_balance=Your Balance: {0}
+gui.pay.send=SEND PAYMENT
+gui.pay.cancel=CANCEL
+
+# ========== HUD ==========
+hud.balance=Balance: {0}
+hud.prefix=Bank
+hud.shown=Balance HUD is now visible
+hud.hidden=Balance HUD is now hidden
+hud.globally_disabled=HUD display is disabled by server configuration
+
+# ========== Validation ==========
+error.invalid_amount=Invalid amount
+error.max_exceeded=Amount exceeds maximum ({0})
+error.select_player=Select a player first
+error.no_permission=You don't have permission
+
+# ========== Action Feedback ==========
+action.data_saved=Economy data saved!
+action.config_reloaded=Configuration reloaded!
+action.config_saved=Configuration saved to file!
+action.config_reset=Config reset to defaults!
+action.hud_enabled=HUD: Enabled
+action.hud_disabled=HUD: Disabled
+action.language_changed=Language: {0}
+action.per_player_enabled=Per-player language: Enabled
+action.per_player_disabled=Per-player language: Disabled
+action.gave=Gave {0} to {1}
+action.took=Took {0} from {1}
+action.set=Set {0} to {1}
+action.reset=Reset {0} to {1}
+action.failed_insufficient=Failed - insufficient funds
+
+# ========== Pay Feedback ==========
+pay.select_player=Please select a player first
+pay.enter_amount=Please enter a valid amount
+pay.payment_sent=Payment sent!
+pay.fee_notice=(Fee: {0})
+pay.balance_after=Balance After
+
+# ========== Physical Currency - Coins ==========
+items.coin_copper.name=Copper Coin
+items.coin_copper.description=Worth 1 copper. The most basic currency.
+items.coin_iron.name=Iron Coin
+items.coin_iron.description=Worth 10 copper.
+items.coin_cobalt.name=Cobalt Coin
+items.coin_cobalt.description=Worth 100 copper.
+items.coin_gold.name=Gold Coin
+items.coin_gold.description=Worth 1,000 copper. A valuable currency.
+items.coin_mithril.name=Mithril Coin
+items.coin_mithril.description=Worth 100,000 copper. The rarest coin.
+items.coin_adamantite.name=Adamantite Coin
+items.coin_adamantite.description=Worth 10,000 copper. Legendary currency.
+
+# Coin names (for bank GUI display)
+coins.copper=Copper
+coins.iron=Iron
+coins.cobalt=Cobalt
+coins.gold=Gold
+coins.mithril=Mithril
+coins.adamantite=Adamantite
+
+# ========== Bank ==========
+bank.title=Bank Account
+bank.balance=Bank Balance: {0}
+bank.physical=Physical Coins: {0}
+bank.total=Total Wealth: {0}
+bank.deposit.success=Deposited {0} to bank
+bank.withdraw.success=Withdrew {0} from bank
+bank.limit=Bank limit: {0}
+bank.full=Bank is full!
+bank.insufficient=Insufficient coins
+
+# ========== GUI - Bank Panel ==========
+gui.bank.title=BANK
+gui.bank.close=X
+
+# Bank Header - Wealth Display
+gui.bank.wallet=WALLET
+gui.bank.bank=BANK
+gui.bank.total=TOTAL
+
+# Bank Tabs
+gui.bank.tab.wallet=WALLET
+gui.bank.tab.deposit=DEPOSIT
+gui.bank.tab.withdraw=WITHDRAW
+gui.bank.tab.exchange=EXCHANGE
+
+# Wallet Tab
+gui.bank.wallet.title=YOUR COIN COLLECTION
+gui.bank.wallet.quick_actions=QUICK ACTIONS
+gui.bank.wallet.deposit_all=DEPOSIT ALL
+gui.bank.wallet.withdraw_all=WITHDRAW ALL
+gui.bank.wallet.consolidate=CONSOLIDATE
+
+# Deposit Tab
+gui.bank.deposit.from=FROM POCKET
+gui.bank.deposit.to=TO BANK
+gui.bank.deposit.amount=AMOUNT TO DEPOSIT
+gui.bank.deposit.confirm=CONFIRM DEPOSIT
+gui.bank.deposit.coins_preview=COINS TO DEPOSIT
+gui.bank.deposit.success=Deposited {0}!
+gui.bank.deposit.failed=Deposit failed
+
+# Withdraw Tab
+gui.bank.withdraw.from=FROM BANK
+gui.bank.withdraw.to=TO POCKET
+gui.bank.withdraw.amount=AMOUNT TO WITHDRAW
+gui.bank.withdraw.confirm=CONFIRM WITHDRAW
+gui.bank.withdraw.coins_preview=COINS TO RECEIVE
+gui.bank.withdraw.success=Withdrew {0}!
+gui.bank.withdraw.failed=Withdraw failed
+gui.bank.withdraw.no_space=Not enough inventory space
+
+# Exchange Tab
+gui.bank.exchange.title=COIN EXCHANGE
+gui.bank.exchange.from=FROM
+gui.bank.exchange.to=TO
+gui.bank.exchange.amount=AMOUNT:
+gui.bank.exchange.confirm=EXCHANGE
+gui.bank.exchange.preview=Preview
+gui.bank.exchange.result=Result:
+gui.bank.exchange.success=Exchange successful!
+gui.bank.exchange.failed=Exchange failed
+gui.bank.exchange.you_have=You have: {0}
+gui.bank.exchange.enter_amount=Enter amount
+gui.bank.exchange.not_enough=Not enough {0} (have {1})
+gui.bank.exchange.need_at_least=Need at least {0} {1}
+gui.bank.exchange.need_slots=Need {0} slots, only {1} free
+gui.bank.exchange.same_coin=Select different coin types
+gui.bank.exchange.rate=RATE: {0} {1} = {2} {3}
+gui.bank.exchange.use_get=USE: {0} {1}  -->  GET: {2} {3}
+gui.bank.exchange.max_possible=MAX POSSIBLE
+
+# Deposit/Withdraw Previews
+gui.bank.deposit.preview=After: Bank {0} (+{1})
+gui.bank.withdraw.preview=After: Pocket {0} (+{1})
+
+# Transactions
+transaction.error.duplicate=Duplicate transaction detected
+transaction.error.invalid_amount=Invalid amount
+transaction.error.too_large=Amount too large
+transaction.error.insufficient_funds=Not enough {0} (have {1}, need {2})
+transaction.error.no_space=Not enough inventory space (need {0} slots, have {1})
+transaction.error.take_failed=Failed to take coins from inventory
+transaction.error.space_changed=Inventory space changed during transaction - value saved to bank
+transaction.error.safe_deposit=No inventory space - your {0} has been deposited to your bank instead
+transaction.error.delivery_failed=Could not deliver coins - your {0} has been deposited to your bank
+transaction.error.bank_insufficient=Insufficient bank balance (have {0}, need {1})
+transaction.error.bank_withdraw_failed=Bank withdrawal failed
+transaction.success.exchange=Exchanged {0} {1} for {2} {3}
+transaction.success.withdraw=Withdrew {0} from bank
+transaction.success.deposit=Deposited {0} to bank
+
+# Common
+gui.bank.error.invalid_amount=Enter a valid amount
+gui.bank.error.insufficient_funds=Insufficient funds
+gui.bank.error.bank_limit=Would exceed bank limit
+gui.bank.wait=Please wait before performing another action
+gui.bank.error.no_pocket_coins=No coins in pocket to deposit
+gui.bank.error.no_bank_coins=No coins in bank to withdraw
+gui.bank.error.no_consolidate=No coins to consolidate
+gui.bank.consolidate_success=Coins consolidated to highest denominations
+

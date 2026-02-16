@@ -1,0 +1,272 @@
+# Ecotale Economy Plugin - English Translations
+# Format: key=value
+# Note: Keys are auto-prefixed with "ecotale." by Hytale's I18nModule
+
+# ========== Commands - Balance ==========
+balance.header=Bakiyeniz
+balance.current=Mevcut Bakiye: {0}
+balance.earned=Toplam Kazanc: {0}
+balance.spent=Toplam Harcama: {0}
+
+# ========== Commands - Pay ==========
+pay.success={0}'a {1} Gönderildi
+pay.received={1}'den {0} Alindi
+pay.fee=Transfer fee: {0}
+pay.insufficient=Yetersiz Fon
+pay.invalid_amount=Geçersiz Tutar
+pay.player_not_found=Oyuncu Bulunamadi
+pay.self=Kendinize ödeme yapamazsiniz.
+pay.minimum=Minimum islem tutari {0}
+
+# ========== Commands - Admin ==========
+admin.give={0}'dan {1}'e Verdi
+admin.take={1}'den {0} Alindi
+admin.set={1}'in Bakiyesini {0} Olarak Ayarla
+admin.reset={0}'in Bakiyesini Sifirla
+admin.save=Ekonomi verileri kaydedildi!
+admin.reload=Yapilandirma yeniden yüklendi!
+admin.no_data=Oyuncu bakiyeleri bulunamadi
+
+# ========== Commands - Top ==========
+top.header=En Yüksek Bakiyeler
+top.entry=#{0} {1} - {2}
+top.empty=Gösterilecek Bakiye Yok.
+
+# ========== GUI - Admin Panel ==========
+gui.admin.title=Ekonomi Admin Panel
+gui.admin.tab.dashboard=KONTROL PANELI
+gui.admin.tab.players=OYUNCULAR
+gui.admin.tab.top=TOP
+gui.admin.tab.log=KAYITLAR
+gui.admin.tab.config=CONFIG
+gui.admin.force_save=FORCE SAVE
+gui.admin.close=X
+
+# ========== GUI - Dashboard ==========
+gui.dashboard.economy_stats=Ekonomi Istatistikleri
+gui.dashboard.total_circulating=Toplam Dolasimdaki Para
+gui.dashboard.total_players=Bakiyesi Olan Oyuncular
+gui.dashboard.total_money=Toplam Para
+gui.dashboard.avg_balance=Ortalama Bakiye
+gui.dashboard.current_config=Mevcut Yapilandirma
+gui.dashboard.recent_activity=Son Aktiviteler
+gui.dashboard.no_activity=Son Aktivite Yok
+
+# ========== GUI - Players Tab ==========
+gui.players.search=Oyuncu Ara...
+gui.players.search_label=ARA
+gui.players.select_player=Oyuncu Seç
+gui.players.amount=Miktar:
+gui.players.give=VER
+gui.players.take=AL
+gui.players.set=SET
+gui.players.reset=RESET
+gui.players.reset_confirm=ONAYLA?
+gui.players.balance=Bakiye: {0}
+gui.players.online=Çevrimiçi
+gui.players.offline=Çevrimdisi
+gui.players.no_players=Oyuncu Bulunamadi
+
+# ========== GUI - Top Tab ==========
+gui.top.title=En İyi 10 Bakiye
+gui.top.rank=#{0}
+gui.top.no_data=Veri Mevcut Degil.
+
+# ========== GUI - Log Tab ==========
+gui.log.filter=Isime göre filtrele...
+gui.log.no_entries=Hiçbir islem yok.
+gui.log.requires_h2=Islem günlügü H2 depolama gerektirir
+gui.log.page=Sayfa {0} / {1}
+
+# ========== GUI - Config Tab ==========
+gui.config.title=Yapilandirma
+gui.config.reload=AYARI YENILE
+gui.config.save=AYARI KAYDET
+gui.config.saved=Yapilandirma Kaydedildi!
+gui.config.reset_defaults=VARSAYILANA SIFIRLA
+gui.config.currency=Para Birimi
+gui.config.symbol=Sembol:
+gui.config.name=Isim:
+gui.config.limits=Bakiye Limiti
+gui.config.starting=Baslangiç:
+gui.config.max=Maksimum:
+gui.config.transactions=Islemler
+gui.config.fee=Transfer Ücreti:
+gui.config.min=Minimum:
+gui.config.display=Görüntüle
+gui.config.hud=HUD Etkinlestir:
+gui.config.decimals=Ondalik Sayilar:
+gui.config.language=Dil
+gui.config.lang=Dil:
+gui.config.per_player=Oyuncu Dilini Kullanin:
+gui.config.yes=Evet
+gui.config.no=Hayir
+
+# ========== GUI - Pay Panel ==========
+gui.pay.title=Ödeme Gönder
+gui.pay.your_balance_label=Bakiyeniz
+gui.pay.search=Ara
+gui.pay.amount=Miktar
+gui.pay.fee_label=Transfer Ücreti
+gui.pay.no_players=Aktif Oyuncu Yok
+gui.pay.recipient=Alici:
+gui.pay.your_balance=Bakiyeniz: {0}
+gui.pay.send=ÖDEME GÖNDER
+gui.pay.cancel=IPTAL
+
+# ========== HUD ==========
+hud.balance=Bakiye: {0}
+hud.prefix=Bakiye
+
+# ========== Validation ==========
+error.invalid_amount=Geçersiz Tutar
+error.max_exceeded=Miktar Maksimum Tutari Asiyor ({0})
+error.select_player=Önce Bir Oyuncu Seçin
+error.no_permission=Izniniz Yok.
+
+# ========== Action Feedback ==========
+action.data_saved=Ekonomi verileri kaydedildi!
+action.config_reloaded=Yapilandirma yeniden yüklendi!
+action.config_saved=Ayarlar dosyaya kaydedildi!
+action.config_reset=Ayarlar varsayilan degerlere sifirlandi!
+action.hud_enabled=HUD: Etkinlesti
+action.hud_disabled=HUD: Devredisi
+action.language_changed=Dil: {0}
+action.per_player_enabled=Oyuncu Basina Dil: Etkinlesti
+action.per_player_disabled=Oyuncu Basina Dil: Devredisi
+action.gave={0}'dan {1}'e Verdi
+action.took={1}'den {0} Alindi.
+action.set={0} degerini {1} olarak ayarla
+action.reset={0} degerini {1} olarak sifirla
+action.failed_insufficient=Basarisiz - Yetersiz Fon
+
+# ========== Pay Feedback ==========
+pay.select_player=Lütfen önce bir oyuncu seçin
+pay.enter_amount=Lütfen geçerli bir tutar girin
+pay.payment_sent=Ödeme Gönderildi!
+pay.fee_notice=(Ücret: {0})
+pay.balance_after=Kalacak Bakiye
+
+# ========== Physical Currency - Coins ==========
+items.coin_copper.name=Bakir Sikke
+items.coin_copper.description=1 Bakir Degerinde. En Temel Para Birimi.
+items.coin_iron.name=Demir Sikke
+items.coin_iron.description=10 Bakir Degerinde.
+items.coin_cobalt.name=Kobalt Sikke
+items.coin_cobalt.description=100 Bakir Degerinde.
+items.coin_gold.name=Altin Sikke
+items.coin_gold.description=1,000 Bakir Degerinde. Degerli Bir Para Birimi.
+items.coin_mithril.name=Mithril Sikke
+items.coin_mithril.description=100,000 Bakir Degerinde. En Nadir Sikke.
+items.coin_adamantite.name=Adamantit Sikke
+items.coin_adamantite.description=10,000 Bakir Degerinde. Efsanevi Para. Birimi.
+
+# Coin names (for bank GUI display)
+coins.copper=Bakir
+coins.iron=Demir
+coins.cobalt=Kobalt
+coins.gold=Altin
+coins.mithril=Mithril
+coins.adamantite=Adamantit
+
+# ========== Bank ==========
+bank.title=Banka Hesabi
+bank.balance=Banka Bakiyesi: {0}
+bank.physical=Fiziksel Sikkeler: {0}
+bank.total=Toplam Servet: {0}
+bank.deposit.success=Bankaya {0} Yatirildi
+bank.withdraw.success=Bankadan {0} Çekildi
+bank.limit=Banka Limiti: {0}
+bank.full=Banka Dolu!
+bank.insufficient=Yetersiz Sikke
+
+# ========== GUI - Bank Panel ==========
+gui.bank.title=BANKA
+gui.bank.close=X
+
+# Bank Header - Wealth Display
+gui.bank.wallet=CÜZDAN
+gui.bank.bank=BANKA
+gui.bank.total=TOPLAM
+
+# Bank Tabs
+gui.bank.tab.wallet=CÜZDAN
+gui.bank.tab.deposit=PARA YATIR
+gui.bank.tab.withdraw=PARA ÇEK
+gui.bank.tab.exchange=TAKAS ET
+
+# Wallet Tab
+gui.bank.wallet.title=SIZIN SIKKE KOLEKSIYONUNUZ
+gui.bank.wallet.quick_actions=HIZLI EYLEMLER
+gui.bank.wallet.deposit_all=HEPSINI YATIR
+gui.bank.wallet.withdraw_all=HEPSINI ÇEK
+gui.bank.wallet.consolidate=BIRLESTIR
+
+# Deposit Tab
+gui.bank.deposit.from=CEPTEN
+gui.bank.deposit.to=BANKAYA
+gui.bank.deposit.amount=YATIRILACAK TUTAR
+gui.bank.deposit.confirm=YATIRMA ISLEMINI ONAYLA
+gui.bank.deposit.coins_preview=SIKKE YATIRILACAK
+gui.bank.deposit.success=Yatirilan {0}!
+gui.bank.deposit.failed=Yatirma Basarisiz!
+
+# Withdraw Tab
+gui.bank.withdraw.from=BANKADAN
+gui.bank.withdraw.to=CEBİNE
+gui.bank.withdraw.amount=ÇEKILECEK TUTAR
+gui.bank.withdraw.confirm=ÇEKMEYI ONAYLA
+gui.bank.withdraw.coins_preview=SIKKE ALINACAK
+gui.bank.withdraw.success=Çekilen {0}!
+gui.bank.withdraw.failed=Çekme Basarisiz!
+gui.bank.withdraw.no_space=Yeterli Stok Alani Yok.
+
+# Exchange Tab
+gui.bank.exchange.title=SIKKE TAKASI
+gui.bank.exchange.from=DAN
+gui.bank.exchange.to=E
+gui.bank.exchange.amount=MIKTAR:
+gui.bank.exchange.confirm=TAKAS
+gui.bank.exchange.preview=Önizleme
+gui.bank.exchange.result=Sonuç:
+gui.bank.exchange.success=Takas Basarili!
+gui.bank.exchange.failed=Takas Basarisiz!
+gui.bank.exchange.you_have=Sahip Olunan: {0}
+gui.bank.exchange.enter_amount=Miktar Girin
+gui.bank.exchange.not_enough=Yeterli Degil {0} (Sahip Olunan {1})
+gui.bank.exchange.need_at_least=En az {0} {1} Gerekiyor
+gui.bank.exchange.need_slots={0} Yuvaya Ihtiyaç Var, Sadece {1} Bos Alan Var
+gui.bank.exchange.same_coin=Farkli Sikke Türlerini Seçin
+gui.bank.exchange.rate=ORAN: {0} {1} = {2} {3}
+gui.bank.exchange.use_get=VER: {0} {1}  -->  AL: {2} {3}
+gui.bank.exchange.max_possible=MAKSIMUM
+
+# Deposit/Withdraw Previews
+gui.bank.deposit.preview=Sonrasinda: Banka {0} (+{1})
+gui.bank.withdraw.preview=Sonrasinda: Cep {0} (+{1})
+
+# Transactions
+transaction.error.duplicate=Yinelenen Islem Tespit Edildi
+transaction.error.invalid_amount=Geçersiz Tutar
+transaction.error.too_large=Miktar Çok Büyük
+transaction.error.insufficient_funds=Yeterli Degil {0} (Elde {1} Var, Ihtiyaç {2})
+transaction.error.no_space=Yeterli Envanter Alani Yok (Ihtiyaç Duyulan {0} Yuva, Mevcut {1})
+transaction.error.take_failed=Envanterden Para Çekme Islemi Basarisiz Oldu.
+transaction.error.space_changed=Islem Sirasinda Stok Alani Degisti - Deger Bankaya Kaydedildi
+transaction.error.safe_deposit=Stok alani yok - {0} tutariniz bunun yerine bankaniza yatirildi
+transaction.error.delivery_failed=Para teslim edilemedi - {0} tutariniz bankaniza yatirildi
+transaction.error.bank_insufficient=Yetersiz Banka Bakiyesi (Sahip Olunan {0}, Ihtiyacım Olan {1})
+transaction.error.bank_withdraw_failed=Bankadan para çekme islemi basarisiz oldu
+transaction.success.exchange=Takas {0} {1} ile {2} {3} arasinda degisti
+transaction.success.withdraw=Bankadan {0} Çekildi
+transaction.success.deposit=Bankaya {0} Yatirildi
+
+# Common
+gui.bank.error.invalid_amount=Geçerli Bir Tutar Girin
+gui.bank.error.insufficient_funds=Yetersiz Fon
+gui.bank.error.bank_limit=Banka Limitini Asacaktir
+gui.bank.wait=Lütfen Baska Bir Islem Yapmadan Önce Bekleyin
+gui.bank.error.no_pocket_coins=Cebinde Yatiracak Sikke Yok
+gui.bank.error.no_bank_coins=Bankada Çekilecek Sikke Yok
+gui.bank.error.no_consolidate=Birlestirilecek Sikke Yok
+gui.bank.consolidate_success=Sikkeler En Yüksek Degerdekilere Göre Birlestirildi.

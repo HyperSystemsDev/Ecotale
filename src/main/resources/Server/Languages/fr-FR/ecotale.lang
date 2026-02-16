@@ -1,0 +1,271 @@
+# Ecotale Economy Plugin - Français (French)
+# Format: key=value
+
+# ========== Commands - Balance ==========
+balance.header=Votre Solde
+balance.current=Solde actuel : {0}
+balance.earned=Total gagné : {0}
+balance.spent=Total dépensé : {0}
+
+# ========== Commands - Pay ==========
+pay.success={0} envoyé à {1}
+pay.received={0} reçu de {1}
+pay.fee=Frais de transfert : {0}
+pay.insufficient=Fonds insuffisants
+pay.invalid_amount=Montant invalide
+pay.player_not_found=Joueur introuvable
+pay.self=Vous ne pouvez pas vous payer vous-même
+pay.minimum=Le minimum est {0}
+
+# ========== Commands - Admin ==========
+admin.give={0} donné à {1}
+admin.take={0} pris à {1}
+admin.set=Solde de {1} défini à {0}
+admin.reset=Solde de {0} réinitialisé
+admin.save=Données sauvegardées !
+admin.reload=Configuration rechargée !
+admin.no_data=Aucun solde trouvé
+
+# ========== Commands - Top ==========
+top.header=Top Soldes
+top.entry=#{0} {1} - {2}
+top.empty=Aucune donnée
+
+# ========== GUI - Admin Panel ==========
+gui.admin.title=Administration
+gui.admin.tab.dashboard=ACCUEIL
+gui.admin.tab.players=JOUEURS
+gui.admin.tab.top=TOP
+gui.admin.tab.log=JOURNAL
+gui.admin.tab.config=CONFIG
+gui.admin.force_save=SAUVER
+gui.admin.close=X
+
+# ========== GUI - Dashboard ==========
+gui.dashboard.economy_stats=Statistiques
+gui.dashboard.total_circulating=En circulation
+gui.dashboard.total_players=Joueurs actifs
+gui.dashboard.total_money=Argent total
+gui.dashboard.avg_balance=Solde moyen
+gui.dashboard.current_config=Configuration actuelle
+gui.dashboard.recent_activity=Activité récente
+gui.dashboard.no_activity=Aucune activité récente
+
+# ========== GUI - Players Tab ==========
+gui.players.search=Rechercher...
+gui.players.search_label=Chercher
+gui.players.select_player=Choisir un joueur
+gui.players.amount=Montant :
+gui.players.give=DONNER
+gui.players.take=PRENDRE
+gui.players.set=DÉFINIR
+gui.players.reset=RESET
+gui.players.reset_confirm=OK ?
+gui.players.balance=Solde : {0}
+gui.players.online=En ligne
+gui.players.offline=Hors ligne
+gui.players.no_players=Aucun joueur
+
+# ========== GUI - Top Tab ==========
+gui.top.title=Top 10 Richesses
+gui.top.rank=#{0}
+gui.top.no_data=Aucune donnée
+
+# ========== GUI - Log Tab ==========
+gui.log.filter=Filtrer par nom...
+gui.log.no_entries=Aucune transaction
+gui.log.requires_h2=Le journal nécessite H2
+gui.log.page=Page {0} sur {1}
+
+# ========== GUI - Config Tab ==========
+gui.config.title=Configuration
+gui.config.reload=REDÉMARRER
+gui.config.save=SAUVEGARDER
+gui.config.saved=Sauvegardé !
+gui.config.reset_defaults=RÉINITIALISER
+gui.config.currency=Devise
+gui.config.symbol=Symbole :
+gui.config.name=Nom :
+gui.config.limits=Limites
+gui.config.starting=Départ :
+gui.config.max=Maximum :
+gui.config.transactions=Transactions
+gui.config.fee=Frais :
+gui.config.min=Minimum :
+gui.config.display=Affichage
+gui.config.hud=HUD :
+gui.config.decimals=Décimales :
+gui.config.language=Langue
+gui.config.lang=Langue :
+gui.config.per_player=Par joueur :
+gui.config.yes=Oui
+gui.config.no=Non
+
+# ========== GUI - Pay Panel ==========
+gui.pay.title=Envoyer Paiement
+gui.pay.your_balance_label=Votre Solde
+gui.pay.search=Chercher
+gui.pay.amount=Montant
+gui.pay.fee_label=Frais
+gui.pay.no_players=Aucun joueur en ligne
+gui.pay.recipient=Destinataire :
+gui.pay.your_balance=Votre Solde : {0}
+gui.pay.send=ENVOYER
+gui.pay.cancel=ANNULER
+
+# ========== HUD ==========
+hud.balance=Solde : {0}
+hud.prefix=Banque
+
+# ========== Validation ==========
+error.invalid_amount=Montant invalide
+error.max_exceeded=Limite dépassée ({0})
+error.select_player=Sélectionnez un joueur
+error.no_permission=Permission refusée
+
+# ========== Action Feedback ==========
+action.data_saved=Données sauvegardées !
+action.config_reloaded=Configuration rechargée !
+action.config_saved=Config sauvegardée !
+action.config_reset=Config réinitialisée !
+action.hud_enabled=HUD : Activé
+action.hud_disabled=HUD : Désactivé
+action.language_changed=Langue : {0}
+action.per_player_enabled=Langue par joueur : Oui
+action.per_player_disabled=Langue par joueur : Non
+action.gave={0} donné à {1}
+action.took={0} pris à {1}
+action.set={0} défini à {1}
+action.reset={0} réinitialisé à {1}
+action.failed_insufficient=Échec - fonds insuffisants
+
+# ========== Pay Feedback ==========
+pay.select_player=Veuillez sélectionner un joueur
+pay.enter_amount=Veuillez entrer un montant
+pay.payment_sent=Paiement envoyé !
+pay.fee_notice=(Frais : {0})
+pay.balance_after=Nouveau Solde
+
+# ========== Physical Currency - Coins ==========
+items.coin_copper.name=Pièce en Cuivre
+items.coin_copper.description=Vaut 1 cuivre. La devise de base.
+items.coin_iron.name=Pièce en Fer
+items.coin_iron.description=Vaut 10 cuivres.
+items.coin_cobalt.name=Pièce en Cobalt
+items.coin_cobalt.description=Vaut 100 cuivres.
+items.coin_gold.name=Pièce en Or
+items.coin_gold.description=Vaut 1 000 cuivres. Devise précieuse.
+items.coin_mithril.name=Pièce en Mithril
+items.coin_mithril.description=Vaut 100 000 cuivres. La pièce la plus rare.
+items.coin_adamantite.name=Pièce en Adamantite
+items.coin_adamantite.description=Vaut 10 000 cuivres. Monnaie légendaire.
+
+# Coin names (for bank GUI display)
+coins.copper=Cuivre
+coins.iron=Fer
+coins.cobalt=Cobalt
+coins.gold=Or
+coins.mithril=Mithril
+coins.adamantite=Adamantite
+
+# ========== Bank ==========
+bank.title=Compte Bancaire
+bank.balance=Banque : {0}
+bank.physical=Poche : {0}
+bank.total=Total : {0}
+bank.deposit.success={0} déposé
+bank.withdraw.success={0} retiré
+bank.limit=Limite : {0}
+bank.full=La banque est pleine !
+bank.insufficient=Pas assez de pièces
+
+# ========== GUI - Bank Panel ==========
+gui.bank.title=BANQUE
+gui.bank.close=X
+
+# Bank Header - Wealth Display
+gui.bank.wallet=POCHE
+gui.bank.bank=BANQUE
+gui.bank.total=TOTAL
+
+# Bank Tabs
+gui.bank.tab.wallet=POCHE
+gui.bank.tab.deposit=DÉPOSER
+gui.bank.tab.withdraw=RETIRER
+gui.bank.tab.exchange=ÉCHANGER
+
+# Wallet Tab
+gui.bank.wallet.title=VOS PIÈCES
+gui.bank.wallet.quick_actions=ACTIONS RAPIDES
+gui.bank.wallet.deposit_all=TOUT DÉPOSER
+gui.bank.wallet.withdraw_all=TOUT RETIRER
+gui.bank.wallet.consolidate=CONSOLIDER
+
+# Deposit Tab
+gui.bank.deposit.from=DEPUIS POCHE
+gui.bank.deposit.to=VERS BANQUE
+gui.bank.deposit.amount=MONTANT DÉPÔT
+gui.bank.deposit.confirm=CONFIRMER
+gui.bank.deposit.coins_preview=PIÈCES À DÉPOSER
+gui.bank.deposit.success={0} déposé !
+gui.bank.deposit.failed=Échec
+
+# Withdraw Tab
+gui.bank.withdraw.from=DEPUIS BANQUE
+gui.bank.withdraw.to=VERS POCHE
+gui.bank.withdraw.amount=MONTANT RETRAIT
+gui.bank.withdraw.confirm=CONFIRMER
+gui.bank.withdraw.coins_preview=PIÈCES À RECEVOIR
+gui.bank.withdraw.success={0} retiré !
+gui.bank.withdraw.failed=Échec
+gui.bank.withdraw.no_space=Plus de place dans l'inventaire
+
+# Exchange Tab
+gui.bank.exchange.title=ÉCHANGE DE PIÈCES
+gui.bank.exchange.from=DE
+gui.bank.exchange.to=VERS
+gui.bank.exchange.amount=MONTANT :
+gui.bank.exchange.confirm=ÉCHANGER
+gui.bank.exchange.preview=Aperçu
+gui.bank.exchange.result=Résultat :
+gui.bank.exchange.success=Échange réussi !
+gui.bank.exchange.failed=Échec
+gui.bank.exchange.you_have=Vous avez : {0}
+gui.bank.exchange.enter_amount=Entrer montant
+gui.bank.exchange.not_enough=Pas assez de {0} (avez {1})
+gui.bank.exchange.need_at_least=Besoin d'au moins {0} {1}
+gui.bank.exchange.need_slots=Besoin de {0} emplacements, seulement {1} libres
+gui.bank.exchange.same_coin=Choisissez des types différents
+gui.bank.exchange.rate=TAUX : {0} {1} = {2} {3}
+gui.bank.exchange.use_get=DONNEZ : {0} {1}  -->  RECEVEZ : {2} {3}
+gui.bank.exchange.max_possible=MAX POSSIBLE
+
+# Deposit/Withdraw Previews
+gui.bank.deposit.preview=Après : Banque {0} (+{1})
+gui.bank.withdraw.preview=Après : Poche {0} (+{1})
+
+# Transactions
+transaction.error.duplicate=Transaction dupliquée détectée
+transaction.error.invalid_amount=Montant invalide
+transaction.error.too_large=Montant trop élevé
+transaction.error.insufficient_funds=Pas assez de {0} (avez {1}, besoin de {2})
+transaction.error.no_space=Pas assez de place (besoin de {0}, avez {1})
+transaction.error.take_failed=Impossible de prendre les pièces
+transaction.error.space_changed=Inventaire modifié - valeur sauvegardée en banque
+transaction.error.safe_deposit=Plus de place - vos {0} sont en banque
+transaction.error.delivery_failed=Échec livraison - vos {0} sont en banque
+transaction.error.bank_insufficient=Solde bancaire insuffisant (avez {0}, besoin de {1})
+transaction.error.bank_withdraw_failed=Échec du retrait bancaire
+transaction.success.exchange={0} {1} échangé contre {2} {3}
+transaction.success.withdraw={0} retiré de la banque
+transaction.success.deposit={0} déposé en banque
+
+# Common
+gui.bank.error.invalid_amount=Entrez un montant valide
+gui.bank.error.insufficient_funds=Fonds insuffisants
+gui.bank.error.bank_limit=Limite bancaire atteinte
+gui.bank.wait=Veuillez patienter
+gui.bank.error.no_pocket_coins=Aucune pièce en poche
+gui.bank.error.no_bank_coins=Aucune pièce en banque
+gui.bank.error.no_consolidate=Rien à consolider
+gui.bank.consolidate_success=Pièces consolidées en valeurs supérieures

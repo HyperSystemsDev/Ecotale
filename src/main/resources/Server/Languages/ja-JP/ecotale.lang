@@ -1,0 +1,271 @@
+# Ecotale Economy Plugin - 日本語 (Japanese)
+# Format: key=value
+
+# ========== Commands - Balance ==========
+balance.header=あなたの残高
+balance.current=現在の残高: {0}
+balance.earned=総獲得額: {0}
+balance.spent=総支出額: {0}
+
+# ========== Commands - Pay ==========
+pay.success={1} に {0} を送金しました
+pay.received={1} から {0} を受け取りました
+pay.fee=振込手数料: {0}
+pay.insufficient=残高不足です
+pay.invalid_amount=無効な金額です
+pay.player_not_found=プレイヤーが見つかりません
+pay.self=自分自身には送金できません
+pay.minimum=最小取引額は {0} です
+
+# ========== Commands - Admin ==========
+admin.give={1} に {0} を与えました
+admin.take={1} から {0} を徴収しました
+admin.set={1} の残高を {0} に設定しました
+admin.reset={0} の残高をリセットしました
+admin.save=経済データを保存しました！
+admin.reload=設定を再読み込みしました！
+admin.no_data=残高データが見つかりません
+
+# ========== Commands - Top ==========
+top.header=長者番付
+top.entry=#{0} {1} - {2}
+top.empty=データがありません
+
+# ========== GUI - Admin Panel ==========
+gui.admin.title=管理パネル
+gui.admin.tab.dashboard=ダッシュボード
+gui.admin.tab.players=プレイヤー
+gui.admin.tab.top=トップ
+gui.admin.tab.log=ログ
+gui.admin.tab.config=設定
+gui.admin.force_save=保存
+gui.admin.close=閉じる
+
+# ========== GUI - Dashboard ==========
+gui.dashboard.economy_stats=経済統計
+gui.dashboard.total_circulating=総流通量
+gui.dashboard.total_players=口座保有者数
+gui.dashboard.total_money=総資産
+gui.dashboard.avg_balance=平均残高
+gui.dashboard.current_config=現在の設定
+gui.dashboard.recent_activity=最近の活動
+gui.dashboard.no_activity=最近の活動はありません
+
+# ========== GUI - Players Tab ==========
+gui.players.search=検索...
+gui.players.search_label=検索
+gui.players.select_player=プレイヤーを選択
+gui.players.amount=金額:
+gui.players.give=与える
+gui.players.take=取る
+gui.players.set=設定
+gui.players.reset=リセット
+gui.players.reset_confirm=確認?
+gui.players.balance=残高: {0}
+gui.players.online=オンライン
+gui.players.offline=オフライン
+gui.players.no_players=プレイヤーなし
+
+# ========== GUI - Top Tab ==========
+gui.top.title=トップ10
+gui.top.rank=#{0}
+gui.top.no_data=データなし
+
+# ========== GUI - Log Tab ==========
+gui.log.filter=名前でフィルタ...
+gui.log.no_entries=取引なし
+gui.log.requires_h2=ログにはH2が必要です
+gui.log.page=ページ {0} / {1}
+
+# ========== GUI - Config Tab ==========
+gui.config.title=設定
+gui.config.reload=再読み込み
+gui.config.save=保存
+gui.config.saved=保存しました！
+gui.config.reset_defaults=初期化
+gui.config.currency=通貨
+gui.config.symbol=記号:
+gui.config.name=名前:
+gui.config.limits=制限
+gui.config.starting=初期:
+gui.config.max=最大:
+gui.config.transactions=取引
+gui.config.fee=手数料:
+gui.config.min=最小:
+gui.config.display=表示
+gui.config.hud=HUD:
+gui.config.decimals=小数:
+gui.config.language=言語
+gui.config.lang=言語:
+gui.config.per_player=プレイヤー別言語:
+gui.config.yes=はい
+gui.config.no=いいえ
+
+# ========== GUI - Pay Panel ==========
+gui.pay.title=送金
+gui.pay.your_balance_label=あなたの残高
+gui.pay.search=検索
+gui.pay.amount=金額
+gui.pay.fee_label=手数料
+gui.pay.no_players=オンラインのプレイヤーがいません
+gui.pay.recipient=受取人:
+gui.pay.your_balance=残高: {0}
+gui.pay.send=送金する
+gui.pay.cancel=キャンセル
+
+# ========== HUD ==========
+hud.balance=残高: {0}
+hud.prefix=銀行
+
+# ========== Validation ==========
+error.invalid_amount=無効な金額です
+error.max_exceeded=上限を超えています ({0})
+error.select_player=プレイヤーを選択してください
+error.no_permission=権限がありません
+
+# ========== Action Feedback ==========
+action.data_saved=保存しました！
+action.config_reloaded=再読み込み完了！
+action.config_saved=設定を保存しました！
+action.config_reset=設定を初期化しました！
+action.hud_enabled=HUD: 有効
+action.hud_disabled=HUD: 無効
+action.language_changed=言語: {0}
+action.per_player_enabled=プレイヤー別言語: 有効
+action.per_player_disabled=プレイヤー別言語: 無効
+action.gave={1} に {0} を与えました
+action.took={1} から {0} を徴収しました
+action.set={0} を {1} に設定しました
+action.reset={0} を {1} にリセットしました
+action.failed_insufficient=失敗 - 残高不足
+
+# ========== Pay Feedback ==========
+pay.select_player=プレイヤーを選択してください
+pay.enter_amount=有効な金額を入力してください
+pay.payment_sent=送金完了！
+pay.fee_notice=(手数料: {0})
+pay.balance_after=送金後の残高
+
+# ========== Physical Currency - Coins ==========
+items.coin_copper.name=銅貨
+items.coin_copper.description=1カッパーの価値。最も基本的な通貨。
+items.coin_iron.name=鉄貨
+items.coin_iron.description=10カッパーの価値。
+items.coin_cobalt.name=コバルト貨
+items.coin_cobalt.description=100カッパーの価値。
+items.coin_gold.name=金貨
+items.coin_gold.description=1,000カッパーの価値。貴重な通貨。
+items.coin_mithril.name=ミスリル貨
+items.coin_mithril.description=100,000カッパーの価値。最も希少なコイン。
+items.coin_adamantite.name=アダマンタイト貨
+items.coin_adamantite.description=10,000カッパーの価値。伝説の通貨。
+
+# Coin names (for bank GUI display)
+coins.copper=銅
+coins.iron=鉄
+coins.cobalt=コバルト
+coins.gold=金
+coins.mithril=ミスリル
+coins.adamantite=アダマンタイト
+
+# ========== Bank ==========
+bank.title=銀行口座
+bank.balance=銀行残高: {0}
+bank.physical=所持金: {0}
+bank.total=総資産: {0}
+bank.deposit.success={0} 預け入れました
+bank.withdraw.success={0} 引き出しました
+bank.limit=銀行上限: {0}
+bank.full=銀行がいっぱいです！
+bank.insufficient=硬貨が足りません
+
+# ========== GUI - Bank Panel ==========
+gui.bank.title=銀行
+gui.bank.close=閉じる
+
+# Bank Header - Wealth Display
+gui.bank.wallet=財布
+gui.bank.bank=銀行
+gui.bank.total=合計
+
+# Bank Tabs
+gui.bank.tab.wallet=財布
+gui.bank.tab.deposit=預入
+gui.bank.tab.withdraw=引出
+gui.bank.tab.exchange=両替
+
+# Wallet Tab
+gui.bank.wallet.title=所持コイン
+gui.bank.wallet.quick_actions=クイックアクション
+gui.bank.wallet.deposit_all=すべて預入
+gui.bank.wallet.withdraw_all=すべて引出
+gui.bank.wallet.consolidate=両替（整理）
+
+# Deposit Tab
+gui.bank.deposit.from=財布から
+gui.bank.deposit.to=銀行へ
+gui.bank.deposit.amount=預入額
+gui.bank.deposit.confirm=預入を確定
+gui.bank.deposit.coins_preview=預け入れるコイン
+gui.bank.deposit.success={0} 預け入れました！
+gui.bank.deposit.failed=預入に失敗しました
+
+# Withdraw Tab
+gui.bank.withdraw.from=銀行から
+gui.bank.withdraw.to=財布へ
+gui.bank.withdraw.amount=引出額
+gui.bank.withdraw.confirm=引出を確定
+gui.bank.withdraw.coins_preview=受け取るコイン
+gui.bank.withdraw.success={0} 引き出しました！
+gui.bank.withdraw.failed=引出に失敗しました
+gui.bank.withdraw.no_space=インベントリに空きがありません
+
+# Exchange Tab
+gui.bank.exchange.title=コイン両替
+gui.bank.exchange.from=元通貨
+gui.bank.exchange.to=先通貨
+gui.bank.exchange.amount=金額:
+gui.bank.exchange.confirm=両替する
+gui.bank.exchange.preview=プレビュー
+gui.bank.exchange.result=結果:
+gui.bank.exchange.success=両替しました！
+gui.bank.exchange.failed=両替に失敗しました
+gui.bank.exchange.you_have=所持: {0}
+gui.bank.exchange.enter_amount=金額を入力
+gui.bank.exchange.not_enough={0} が足りません (所持: {1})
+gui.bank.exchange.need_at_least=最低 {0} {1} 必要です
+gui.bank.exchange.need_slots={0} スロット必要です (空き: {1})
+gui.bank.exchange.same_coin=異なる種類を選択してください
+gui.bank.exchange.rate=レート: {0} {1} = {2} {3}
+gui.bank.exchange.use_get=使用: {0} {1}  -->  獲得: {2} {3}
+gui.bank.exchange.max_possible=最大可能額
+
+# Deposit/Withdraw Previews
+gui.bank.deposit.preview=預入後: 銀行 {0} (+{1})
+gui.bank.withdraw.preview=引出後: 財布 {0} (+{1})
+
+# Transactions
+transaction.error.duplicate=重複した取引が検出されました
+transaction.error.invalid_amount=無効な金額です
+transaction.error.too_large=金額が大きすぎます
+transaction.error.insufficient_funds={0} が足りません (所持 {1}, 必要 {2})
+transaction.error.no_space=空きスペースが足りません (必要 {0}, 空き {1})
+transaction.error.take_failed=インベントリからコインを取得できませんでした
+transaction.error.space_changed=インベントリの状態が変わりました - 銀行に保存されました
+transaction.error.safe_deposit=空きがありません - {0} は銀行に送られました
+transaction.error.delivery_failed=受取失敗 - {0} は銀行に送られました
+transaction.error.bank_insufficient=銀行残高が不足しています (所持 {0}, 必要 {1})
+transaction.error.bank_withdraw_failed=銀行からの引き出しに失敗しました
+transaction.success.exchange={0} {1} を {2} {3} に両替しました
+transaction.success.withdraw=銀行から {0} 引き出しました
+transaction.success.deposit=銀行に {0} 預け入れました
+
+# Common
+gui.bank.error.invalid_amount=有効な金額を入力してください
+gui.bank.error.insufficient_funds=残高不足です
+gui.bank.error.bank_limit=銀行の上限を超えています
+gui.bank.wait=少々お待ちください
+gui.bank.error.no_pocket_coins=預け入れるコインがありません
+gui.bank.error.no_bank_coins=引き出すコインがありません
+gui.bank.error.no_consolidate=両替するコインがありません
+gui.bank.consolidate_success=コインを上位硬貨にまとめました
