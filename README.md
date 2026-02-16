@@ -210,4 +210,4 @@ See [docs/API.md](docs/API.md) for full API documentation.
 
 ## License
 
-MIT License - 2026 Tera-bytez
+GPLv3 License - 2026 Tera-bytez
